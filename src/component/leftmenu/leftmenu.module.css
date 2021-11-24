@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 13em;
+  height: 100vh;
+  border-right: 1px solid lightgray;
+  color: rgb(112, 112, 112);
+  overflow-y: auto;
+}
+
+.menu,
+.menu_home,
+.menu_setting {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+  padding: 0.5em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu:hover,
+.menu_home:hover,
+.menu_setting:hover {
+  color: var(--main-text-color);
+  background-color: var(--secondary-dark-color);
+  border-radius: 8px;
+}
+
+.menu_home {
+  margin-top: 2em;
+  border-bottom: 1px solid lightgray;
+}
+
+.menu_setting {
+  margin-top: 10em;
+  margin-bottom: 10em;
+  border-top: 1px solid lightgray;
+}
+
+.icon {
+  padding-left: 0.2em;
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.text {
+  padding-left: 1.2em;
+  font-size: 0.9rem;
+}

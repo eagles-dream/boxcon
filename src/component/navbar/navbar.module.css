@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  border-bottom: 1px solid lightgray;
+  padding: 0.8em 2em;
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+  position: sticky;
+  top: 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 1.2em;
+}
+
+.text {
+  padding-left: 0.3em;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+}
+
+.store {
+  border: 1px solid var(--main-text-color);
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.store:hover {
+  background-color: var(--main-dark-color);
+  font-size: 0.81rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  padding-left: 1.5em;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: var(--secondary-color);
+}
