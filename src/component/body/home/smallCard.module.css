@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  height: 5em;
+  border-radius: 12px;
+  margin-top: 1.2em;
+  padding: 1em;
+  background-color: var(--main-text-color);
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5 {
+  font-size: 2rem;
+}
+
+.icon1 {
+  color: var(--pink-color);
+}
+
+.icon2 {
+  color: var(--blue-color);
+}
+
+.icon3 {
+  color: var(--green-color);
+}
+
+.icon4 {
+  color: var(--red-color);
+}
+
+.icon5 {
+  color: var(--yellow-color);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  align-items: flex-end;
+  margin-left: 2em;
+  line-height: 0.1em;
+}
+
+.text_title {
+  color: var(--secondary-text-color);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.count1,
+.count2,
+.count3,
+.count4,
+.count5 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+
+.count1 {
+  color: var(--pink-color);
+}
+
+.count2 {
+  color: var(--blue-color);
+}
+
+.count3 {
+  color: var(--green-color);
+}
+
+.count4 {
+  color: var(--red-color);
+}
+
+.count5 {
+  color: var(--yellow-color);
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 17rem;
+  }
+
+  .text {
+    width: 10rem;
+  }
+}

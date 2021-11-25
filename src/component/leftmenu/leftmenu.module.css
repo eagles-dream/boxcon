@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   width: 13em;
+  flex-shrink: 0;
   height: 100vh;
-  border-right: 1px solid lightgray;
-  color: rgb(112, 112, 112);
+  border-right: 1px solid rgb(233, 233, 233);
+  background-color: var(--main-text-color);
+  color: var(--main-light-color);
   overflow-y: auto;
 }
 
@@ -18,6 +20,12 @@
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--main-light-color);
+}
+
+.menu {
+  margin: 0.5em 1em;
 }
 
 .menu:hover,
@@ -30,13 +38,13 @@
 
 .menu_home {
   margin-top: 2em;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid rgb(233, 233, 233);
 }
 
 .menu_setting {
   margin-top: 10em;
   margin-bottom: 10em;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid rgb(233, 233, 233);
 }
 
 .icon {

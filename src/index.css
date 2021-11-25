@@ -7,6 +7,11 @@
   --secondary-dark-color: #8d9fa8;
   --secondary-light-color: #f0ffff;
   --secondary-text-color: #000000;
+  --green-color: #1b5e20;
+  --blue-color: #0d47a1;
+  --red-color: #b71c1c;
+  --yellow-color: #f57f17;
+  --pink-color: #880e4f;
 }
 
 * {

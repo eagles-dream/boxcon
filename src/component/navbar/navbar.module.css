@@ -18,6 +18,8 @@
   font-weight: 700;
   font-style: italic;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--main-text-color);
 }
 
 .logo {
