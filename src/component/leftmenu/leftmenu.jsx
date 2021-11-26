@@ -7,7 +7,7 @@ const LeftMenu = () => {
     <div className={styles.container}>
       <Link to='home' className={styles.menu_home}>
         <span className={styles.icon}><i className="fas fa-home"></i></span>
-        <span className={styles.text}>Home</span>
+        <span className={styles.text}>홈</span>
       </Link>
       <Link to='product' className={styles.menu}>
         <span className={styles.icon}><i className="fas fa-boxes"></i></span>
