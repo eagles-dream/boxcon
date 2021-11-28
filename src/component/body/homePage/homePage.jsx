@@ -1,16 +1,21 @@
 import React from 'react';
 import styles from './homePage.module.css'
+import Introduction1 from './components/introduction1'
+import Introduction2 from './components/introduction2'
+import ProductPage from './components/productPage';
+import StockPage from './components/stockPage';
+import OrderPage from './components/orderPage';
+import Footer from './components/footer';
 
-const HomePage = () => {
+const HomePage = ({logIn}) => {
   return(
     <div className={styles.container}>
-      <div className={styles.left}>
-        <span className={styles.text2}>판매자의</span>
-        <span className={styles.text1}>일상을 바꾸다. 박스콘</span>
-      </div>
-      <div className={styles.right}>
-        <span className={styles.img}><i className="fas fa-people-carry"></i></span>
-      </div>
+      <Introduction1 logIn={logIn} />
+      <Introduction2 />
+      <ProductPage />
+      <StockPage />
+      <OrderPage />
+      <Footer />
     </div>
   )
 }

@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+  padding: 5em 12em;
+  animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+  from {
+    background-color: var(--main-color);
+  }
+  to {
+    background-color: var(--main-toggle-color);
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.text1 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-left: 0.2em;
+  padding-bottom: 0.5em;
+  color: var(--secondary-color);
+}
+
+.text2,
+.text3 {
+  font-size: 4rem;
+  font-weight: 600;
+  padding-bottom: 0.5em;
+}
+
+.text2 {
+  padding-bottom: 0;
+}
+
+.button {
+  font-size: 1.5rem;
+  padding: 0.3em;
+  margin: 0 2em;
+  text-align: center;
+  border: 1px solid var(--main-text-color);
+  border-radius: 36px;
+  background-color: var(--main-dark-color);
+  color: var(--main-text-color);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--main-light-color);
+  color: var(--main-text-color);
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 20rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 3em 1em;
+  }
+
+  .text1 {
+    font-size: 1.5rem;
+  }
+
+  .text2,
+  .text3 {
+    font-size: 2.7rem;
+  }
+
+  .button {
+    font-size: 1.1rem;
+  }
+
+  .image {
+    padding-top: 3em;
+  }
+
+  .icon {
+    font-size: 15rem;
+  }
+}

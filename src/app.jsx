@@ -27,16 +27,16 @@ function App() {
       <NavBar isLogin={isLogin} logIn={logIn} logOut={logOut} />
       {
         !isLogin 
-        ? <Routes><Route path="/" element={<HomePage />} /></Routes>
+        ? <Routes><Route path="/" element={<HomePage logIn={logIn} />} /></Routes>
         : <div className={styles.body}>
             <LeftMenu />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/product" element={<Product />} />
-              <Route path="/stock" element={<Stock />} />
-              <Route path="/order" element={<Order />} />
-              <Route path="/setting" element={<Setting />} />
+              <Route path="home" element={<Home />} />
+              <Route path="product" element={<Product />} />
+              <Route path="stock" element={<Stock />} />
+              <Route path="order" element={<Order />} />
+              <Route path="setting" element={<Setting />} />
             </Routes>
           </div>
       }

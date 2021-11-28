@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  background-color: var(--main-dark-color);
+  color: var(--main-text-color);
+  padding: 6em 12em;
+}
+
+.copyright {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 4em 1em;
+  }
+}

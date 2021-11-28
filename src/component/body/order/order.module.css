@@ -30,6 +30,7 @@
 .icon {
   font-size: 7rem;
   color: var(--red-color);
+  opacity: 0.3;
 }
 
 .text {

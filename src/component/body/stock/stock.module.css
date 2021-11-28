@@ -30,6 +30,7 @@
 .icon {
   font-size: 7rem;
   color: var(--green-color);
+  opacity: 0.3;
 }
 
 .text {
