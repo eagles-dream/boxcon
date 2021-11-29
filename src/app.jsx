@@ -11,6 +11,7 @@ import Order from './component/body/order/order';
 import HomePage from './component/body/homePage/homePage';
 import Setting from './component/body/setting/setting';
 import { useState } from 'react';
+import Modal from './component/body/home/modal';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -21,25 +22,30 @@ function App() {
     setIsLogin(!isLogin)
     navigate('/')
   }
+  
+  const [show, setShow] = useState(false);
+  const modalClose = () => setShow(false);
+  const modalShow = () => setShow(true);
 
   return (
     <div className={styles.container}>
-      <NavBar isLogin={isLogin} logIn={logIn} logOut={logOut} />
+      <NavBar isLogin={isLogin} logIn={logIn} logOut={logOut} modalShow={modalShow} />
       {
         !isLogin 
         ? <Routes><Route path="/" element={<HomePage logIn={logIn} />} /></Routes>
         : <div className={styles.body}>
             <LeftMenu />
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="home" element={<Home />} />
-              <Route path="product" element={<Product />} />
-              <Route path="stock" element={<Stock />} />
-              <Route path="order" element={<Order />} />
+              <Route path="/" element={<Home show={show} modalClose={modalClose} modalShow={modalShow} />} />
+              <Route path="home" element={<Home show={show} modalClose={modalClose} modalShow={modalShow} />} />
+              <Route path="product" element={<Product show={show} modalClose={modalClose} modalShow={modalShow} />} />
+              <Route path="stock" element={<Stock show={show} modalClose={modalClose} modalShow={modalShow} />} />
+              <Route path="order" element={<Order show={show} modalClose={modalClose} modalShow={modalShow} />} />
               <Route path="setting" element={<Setting />} />
             </Routes>
           </div>
       }
+      <Modal show={show} modalClose={modalClose}/>
     </div>
   );
 }

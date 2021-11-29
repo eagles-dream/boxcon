@@ -22,10 +22,10 @@ const Introduction2 = () => {
       </div>
       <div className={styles.box}>
         <CarouselPage />
-        <div className={styles.box_main}>
+        {/* <div className={styles.box_main}>
           <span className={styles.box_main_title}>상품관리</span>
           <span className={styles.box_main_icon}><i className="fas fa-boxes"></i></span>
-        </div>
+        </div> */}
         <div className={styles.box_sub}>
           <span className={styles.sub1}>
             <span className={styles.sub1_text}>

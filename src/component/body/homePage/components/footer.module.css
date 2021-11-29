@@ -9,7 +9,7 @@
 }
 
 .copyright {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-style: italic;
 }
 
@@ -18,5 +18,9 @@
     display: flex;
     flex-direction: column;
     padding: 4em 1em;
+  }
+
+  .copyright {
+    font-size: 1.1rem;
   }
 }

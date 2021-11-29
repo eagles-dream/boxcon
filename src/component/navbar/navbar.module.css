@@ -97,7 +97,7 @@
 }
 
 .icon:hover {
-  color: var(--secondary-color);
+  color: var(--main-dark-color);
 }
 
 .button {

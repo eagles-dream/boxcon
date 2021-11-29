@@ -58,3 +58,9 @@
   color: var(--main-text-color);
   background-color: var(--red-color);
 }
+
+@media screen and (max-width: 1200px) {
+  .empty {
+    width: 50rem;
+  }
+}
