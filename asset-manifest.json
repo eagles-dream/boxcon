@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/boxcon/static/css/main.1e39c14c.chunk.css",
+    "main.css": "/boxcon/static/css/main.ad5433f2.chunk.css",
     "main.js": "/boxcon/static/js/main.d389d852.chunk.js",
     "main.js.map": "/boxcon/static/js/main.d389d852.chunk.js.map",
     "runtime-main.js": "/boxcon/static/js/runtime-main.6f1f8543.js",
@@ -10,14 +10,14 @@
     "static/js/2.53abb10f.chunk.js.map": "/boxcon/static/js/2.53abb10f.chunk.js.map",
     "index.html": "/boxcon/index.html",
     "static/css/2.4659568d.chunk.css.map": "/boxcon/static/css/2.4659568d.chunk.css.map",
-    "static/css/main.1e39c14c.chunk.css.map": "/boxcon/static/css/main.1e39c14c.chunk.css.map",
+    "static/css/main.ad5433f2.chunk.css.map": "/boxcon/static/css/main.ad5433f2.chunk.css.map",
     "static/js/2.53abb10f.chunk.js.LICENSE.txt": "/boxcon/static/js/2.53abb10f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6f1f8543.js",
     "static/css/2.4659568d.chunk.css",
     "static/js/2.53abb10f.chunk.js",
-    "static/css/main.1e39c14c.chunk.css",
+    "static/css/main.ad5433f2.chunk.css",
     "static/js/main.d389d852.chunk.js"
   ]
 }
