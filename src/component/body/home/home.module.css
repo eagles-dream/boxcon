@@ -12,5 +12,10 @@
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--main-color);
-  width: 30rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 2em 1em;
+  }
 }

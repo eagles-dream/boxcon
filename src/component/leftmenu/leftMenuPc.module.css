@@ -10,10 +10,6 @@
   overflow-y: auto;
 }
 
-.container_close {
-  display: none;
-}
-
 .menu,
 .menu_home,
 .menu_setting {
@@ -63,12 +59,6 @@
 }
 
 @media screen and (max-width: 780px) {
-  .container {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 780px) {
   .container {
     display: none;
   }

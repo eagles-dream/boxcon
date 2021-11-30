@@ -12,6 +12,7 @@ import HomePage from './component/body/homePage/homePage';
 import Setting from './component/body/setting/setting';
 import { useState } from 'react';
 import Modal from './component/body/home/modal';
+import LeftMenuPc from './component/leftMenu/leftMenuPc';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -27,14 +28,20 @@ function App() {
   const modalClose = () => setShow(false);
   const modalShow = () => setShow(true);
 
+  const [open, setOpen] = useState(false)
+  const toggle = () => {
+    setOpen((open)=>{return !open})
+  }
+
   return (
     <div className={styles.container}>
-      <NavBar isLogin={isLogin} logIn={logIn} logOut={logOut} modalShow={modalShow} />
+      <NavBar isLogin={isLogin} logIn={logIn} logOut={logOut} modalShow={modalShow} toggle={toggle} />
       {
         !isLogin 
         ? <Routes><Route path="/" element={<HomePage logIn={logIn} />} /></Routes>
         : <div className={styles.body}>
-            <LeftMenu />
+            <LeftMenuPc />
+            <LeftMenu open={open} toggle={toggle} />
             <Routes>
               <Route path="/" element={<Home show={show} modalClose={modalClose} modalShow={modalShow} />} />
               <Route path="home" element={<Home show={show} modalClose={modalClose} modalShow={modalShow} />} />

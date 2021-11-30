@@ -2,13 +2,13 @@ import React from 'react';
 import styles from './navBar.module.css'
 import { Link } from 'react-router-dom';
 
-const NavBar = ({isLogin, logIn, logOut, modalShow}) => {
+const NavBar = ({isLogin, logIn, logOut, modalShow, toggle}) => {
   return(
     <div className={isLogin ? styles.container : styles.container_homepage}>
-      <Link to='/' className={isLogin ? styles.title : styles.title_homepage}>
+      <div className={isLogin ? styles.title : styles.title_homepage}>
         <span className={styles.logo}><i className="fab fa-xbox"></i></span>
         <span className={styles.text}>BOXCon</span>
-      </Link>
+      </div>
       <div className={styles.login}>
         {
           !isLogin
@@ -16,6 +16,7 @@ const NavBar = ({isLogin, logIn, logOut, modalShow}) => {
           : <>
               <span className={styles.store} onClick={modalShow}>스마트스토어 연동</span>
               <span className={styles.icon} onClick={logOut}><i className="fas fa-user"></i></span>
+              <span className={styles.hamburger} onClick={toggle}><i className="fas fa-bars"></i></span>
             </>
         }
       </div>
