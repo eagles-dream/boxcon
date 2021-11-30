@@ -1,5 +1,4 @@
-import Button from '@restart/ui/esm/Button';
-import { Modal } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import React from 'react';
 import styles from './modal.module.css'
 

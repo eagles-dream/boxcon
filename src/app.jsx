@@ -13,12 +13,16 @@ import Setting from './component/body/setting/setting';
 import { useState } from 'react';
 import Modal from './component/body/home/modal';
 import LeftMenuPc from './component/leftMenu/leftMenuPc';
+import ModalLogin from './component/body/homePage/components/modalLogin';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
-
-  const logIn = () => setIsLogin(!isLogin)
+  const logIn = () => {
+    setIsLogin(!isLogin)
+    modalLoginClose()
+  }
+  
   const logOut = () => {
     setIsLogin(!isLogin)
     navigate('/')
@@ -33,9 +37,13 @@ function App() {
     setOpen((open)=>{return !open})
   }
 
+  const [showLogin, setShowLogin] = useState(false)
+  const modalLogin = () => {setShowLogin(true)}
+  const modalLoginClose = () => {setShowLogin(false)}
+
   return (
     <div className={styles.container}>
-      <NavBar isLogin={isLogin} logIn={logIn} logOut={logOut} modalShow={modalShow} toggle={toggle} />
+      <NavBar isLogin={isLogin} modalLogin={modalLogin} logOut={logOut} modalShow={modalShow} toggle={toggle} />
       {
         !isLogin 
         ? <Routes><Route path="/" element={<HomePage logIn={logIn} />} /></Routes>
@@ -52,7 +60,8 @@ function App() {
             </Routes>
           </div>
       }
-      <Modal show={show} modalClose={modalClose}/>
+      <Modal show={show} modalClose={modalClose} />
+      <ModalLogin showLogin={showLogin} modalLoginClose={modalLoginClose} logIn={logIn} />
     </div>
   );
 }

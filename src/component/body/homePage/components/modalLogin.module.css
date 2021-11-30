@@ -1,0 +1,91 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 0.5em;
+}
+
+.text {
+  font-size: 1rem;
+  color: gray;
+  padding-top: 0.2em;
+  padding-bottom: 0.5em;
+}
+
+.body {
+  height: 20em;
+}
+
+.sns {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-top: 0.5em;
+}
+
+.brand {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.naver,
+.kakao,
+.google {
+  border-radius: 8px;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.naver {
+  background-color: #04c035;
+  color: var(--main-text-color);
+  width: 30%;
+}
+
+.kakao {
+  background-color: #fee500;
+  color: #391b1b;
+  width: 30%;
+}
+
+.google {
+  background-color: #f2f4f6;
+  color: #333d4b;
+  width: 30%;
+}
+
+.button1,
+.button2 {
+  border-radius: 24px;
+  border-color: var(--main-color);
+  padding: 0.3em 1em;
+  background-color: var(--main-text-color);
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.button2 {
+  padding: 0.3em 4em;
+}
+
+.button1:hover,
+.button2:hover {
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+}
+
+@media screen and (max-width: 1200px) {
+  .button {
+    padding: 0.3em 1em;
+  }
+}
