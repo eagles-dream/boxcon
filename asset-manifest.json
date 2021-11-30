@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/boxcon/static/css/main.4133199c.chunk.css",
-    "main.js": "/boxcon/static/js/main.cc8e465d.chunk.js",
-    "main.js.map": "/boxcon/static/js/main.cc8e465d.chunk.js.map",
+    "main.css": "/boxcon/static/css/main.8c09e0d9.chunk.css",
+    "main.js": "/boxcon/static/js/main.f04dbf9c.chunk.js",
+    "main.js.map": "/boxcon/static/js/main.f04dbf9c.chunk.js.map",
     "runtime-main.js": "/boxcon/static/js/runtime-main.6f1f8543.js",
     "runtime-main.js.map": "/boxcon/static/js/runtime-main.6f1f8543.js.map",
     "static/css/2.4659568d.chunk.css": "/boxcon/static/css/2.4659568d.chunk.css",
-    "static/js/2.82ce0c25.chunk.js": "/boxcon/static/js/2.82ce0c25.chunk.js",
-    "static/js/2.82ce0c25.chunk.js.map": "/boxcon/static/js/2.82ce0c25.chunk.js.map",
+    "static/js/2.261bd917.chunk.js": "/boxcon/static/js/2.261bd917.chunk.js",
+    "static/js/2.261bd917.chunk.js.map": "/boxcon/static/js/2.261bd917.chunk.js.map",
     "index.html": "/boxcon/index.html",
     "static/css/2.4659568d.chunk.css.map": "/boxcon/static/css/2.4659568d.chunk.css.map",
-    "static/css/main.4133199c.chunk.css.map": "/boxcon/static/css/main.4133199c.chunk.css.map",
-    "static/js/2.82ce0c25.chunk.js.LICENSE.txt": "/boxcon/static/js/2.82ce0c25.chunk.js.LICENSE.txt"
+    "static/css/main.8c09e0d9.chunk.css.map": "/boxcon/static/css/main.8c09e0d9.chunk.css.map",
+    "static/js/2.261bd917.chunk.js.LICENSE.txt": "/boxcon/static/js/2.261bd917.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6f1f8543.js",
     "static/css/2.4659568d.chunk.css",
-    "static/js/2.82ce0c25.chunk.js",
-    "static/css/main.4133199c.chunk.css",
-    "static/js/main.cc8e465d.chunk.js"
+    "static/js/2.261bd917.chunk.js",
+    "static/css/main.8c09e0d9.chunk.css",
+    "static/js/main.f04dbf9c.chunk.js"
   ]
 }
