@@ -12,11 +12,32 @@
   display: none;
 }
 
+.store {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1em 1.5em;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.store_text {
+  border-radius: 12px;
+  padding: 0.5em 1em;
+  background-color: var(--main-dark-color);
+  color: var(--main-text-color);
+  cursor: pointer;
+}
+
+.store_text:hover {
+  background-color: var(--main-color);
+}
+
 .menu {
   text-align: center;
   width: 90%;
   margin: 0.5em;
-  padding: 0.3em 1em;
+  padding: 0.5em 1em;
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;

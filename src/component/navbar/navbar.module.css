@@ -83,14 +83,14 @@
   font-size: 0.81rem;
 }
 
-.icon {
-  font-size: 1.5rem;
-  padding-left: 1.5em;
+.user {
+  font-size: 1rem;
+  padding-left: 2em;
   cursor: pointer;
 }
 
-.icon:hover {
-  color: var(--main-dark-color);
+.user:hover {
+  color: var(--main-light-color);
 }
 
 .hamburger {
@@ -129,7 +129,11 @@
     cursor: pointer;
   }
 
-  .icon {
+  .store {
+    display: none;
+  }
+
+  .user {
     padding-left: 0.8em;
   }
 

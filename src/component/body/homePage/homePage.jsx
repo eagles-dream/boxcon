@@ -7,10 +7,10 @@ import StockPage from './components/stockPage';
 import OrderPage from './components/orderPage';
 import Footer from './components/footer';
 
-const HomePage = ({logIn}) => {
+const HomePage = ({modalLogin}) => {
   return(
     <div className={styles.container}>
-      <Introduction1 logIn={logIn} />
+      <Introduction1 modalLogin={modalLogin} />
       <Introduction2 />
       <ProductPage />
       <StockPage />

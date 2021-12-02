@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './leftMenu.module.css'
 import { Link } from 'react-router-dom';
 
-const LeftMenu = ({open, toggle}) => {
+const LeftMenu = ({open, toggle, modalShow}) => {
   return(
     <div className={!open ? styles.container_close : styles.container}>
       <Link to='home' className={styles.menu} onClick={toggle}>
@@ -20,6 +20,9 @@ const LeftMenu = ({open, toggle}) => {
       <Link to='setting' className={styles.menu} onClick={toggle}>
         <span className={styles.text}>설정</span>
       </Link>
+      <span className={styles.store} onClick={modalShow}>
+        <span className={styles.store_text}>스마트스토어 연동</span>
+      </span>
     </div>
   )
 }
