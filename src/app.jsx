@@ -29,7 +29,7 @@ function App() {
   
   const logOut = () => {
     setIsLogin(!isLogin)
-    navigate('/')
+    navigate('boxcon')
   }
   
   const [user, setUser] = useState();
@@ -96,12 +96,12 @@ function App() {
       <NavBar isLogin={isLogin} modalShow={modalShow} modalLogin={modalLogin} user={user} modalLogOut={modalLogOut} googleLogIn={googleLogIn} toggle={toggle} />
       {
         !isLogin 
-        ? <Routes><Route path="/" element={<HomePage modalLogin={modalLogin} />} /></Routes>
+        ? <Routes><Route path="boxcon" element={<HomePage modalLogin={modalLogin} />} /></Routes>
         : <div className={styles.body}>
             <LeftMenuPc />
             <LeftMenu open={open} toggle={toggle} modalShow={modalShow} />
             <Routes>
-              <Route path="/" element={<Home show={show} modalClose={modalClose} modalShow={modalShow} />} />
+              <Route path="boxcon" element={<Home show={show} modalClose={modalClose} modalShow={modalShow} />} />
               <Route path="home" element={<Home show={show} modalClose={modalClose} modalShow={modalShow} />} />
               <Route path="product" element={<Product show={show} modalClose={modalClose} modalShow={modalShow} />} />
               <Route path="stock" element={<Stock show={show} modalClose={modalClose} modalShow={modalShow} />} />
