@@ -31,37 +31,37 @@
 
 .brand {
   display: flex;
-  justify-content: space-around;
-  padding: 1em 0;
+  flex-direction: column;
+  align-items: center;
   font-size: 1rem;
   font-weight: 600;
+  margin-top: 0.8em;
 }
 
 .naver,
 .kakao,
 .google {
   border-radius: 8px;
-  padding: 1em 1.5em;
+  padding: 0.7em 1.5em;
+  margin: 0.3em 0;
   cursor: pointer;
   text-align: center;
+  width: 80%;
 }
 
 .naver {
   background-color: #04c035;
   color: var(--main-text-color);
-  width: 30%;
 }
 
 .kakao {
   background-color: #fee500;
   color: #391b1b;
-  width: 30%;
 }
 
 .google {
   background-color: #f2f4f6;
   color: #333d4b;
-  width: 30%;
 }
 
 .button1,

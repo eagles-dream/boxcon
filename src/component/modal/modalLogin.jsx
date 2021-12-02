@@ -13,9 +13,9 @@ const ModalLogin = ({showLogin, modalLoginClose, logIn, googleLogIn}) => {
         <div className={styles.sns_container}>
           <div className={styles.sns}>SNS 로그인</div>
           <div className={styles.brand}>
-            <span className={styles.naver}>네이버</span>
-            <span className={styles.kakao}>카카오</span>
-            <span className={styles.google} onClick={googleLogIn}>구글</span>
+            <span className={styles.naver}>네이버 로그인</span>
+            <span className={styles.kakao}>카카오 로그인</span>
+            <span className={styles.google} onClick={googleLogIn}>구글 로그인</span>
           </div>
         </div>
       </Modal.Body>
