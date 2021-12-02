@@ -31,9 +31,8 @@ function App() {
     setIsLogin(!isLogin)
     navigate('/')
   }
-
   
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
 
   const googleLogIn = () => {
     const provider = new GoogleAuthProvider();
