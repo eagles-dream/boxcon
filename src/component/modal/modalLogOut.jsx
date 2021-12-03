@@ -2,8 +2,9 @@ import { Modal, Button } from 'react-bootstrap';
 import React from 'react';
 import styles from './modalLogOut.module.css'
 
-const MadalLogOut = ({showLogOut, modalLogOutClose, googleLogOut}) => {
+const MadalLogOut = ({showLogOut, modalLogOutClose, kakaoLogOut, googleLogOut}) => {
   const logOut = () => {
+    kakaoLogOut();
     googleLogOut();
     modalLogOutClose();
   }

@@ -2,7 +2,7 @@ import { Modal, Button } from 'react-bootstrap';
 import React from 'react';
 import styles from './modalLogin.module.css'
 
-const ModalLogin = ({showLogin, modalLoginClose, logIn, googleLogIn}) => {
+const ModalLogin = ({showLogin, modalLoginClose, kakaoLogIn, googleLogIn, logIn}) => {
   return(
     <Modal className={styles.container} show={showLogin} onHide={modalLoginClose} keyboard={false} centered>
       <Modal.Header className={styles.header}>
@@ -14,7 +14,7 @@ const ModalLogin = ({showLogin, modalLoginClose, logIn, googleLogIn}) => {
           <div className={styles.sns}>SNS 로그인</div>
           <div className={styles.brand}>
             <span className={styles.naver}>네이버 로그인</span>
-            <span className={styles.kakao}>카카오 로그인</span>
+            <span className={styles.kakao} onClick={kakaoLogIn}>카카오 로그인</span>
             <span className={styles.google} onClick={googleLogIn}>구글 로그인</span>
           </div>
         </div>

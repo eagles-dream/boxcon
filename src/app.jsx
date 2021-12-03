@@ -25,15 +25,46 @@ function App() {
   const logIn = () => {
     setIsLogin(!isLogin)
     modalLoginClose()
-  }
-  
+  }  
   const logOut = () => {
     setIsLogin(!isLogin)
     navigate('/')
   }
-  
-  const [user, setUser] = useState();
 
+  const [kakaoUser, setKakaoUser] = useState();
+  const kakaoLogIn = () => {
+    window.Kakao.Auth.login({
+      scope: 'profile_nickname, account_email',
+      success: (data) => {
+        //console.log(data)
+        console.log(data.access_token)
+        console.log(data.refresh_token)
+        window.Kakao.API.request({
+          url: '/v2/user/me',
+          success: (res) => {
+            const account = res.kakao_account;
+            setKakaoUser(account.email)
+            console.log(account.email)
+            console.log(account.profile.nickname)
+          }
+        })
+        .then(logIn)
+      }
+    })
+  }
+  const kakaoLogOut = () => {
+    if (!window.Kakao.Auth.getAccessToken()) {
+      console.log('Not logged in.');
+      return;
+    };
+    window.Kakao.Auth.logout(function() {
+      console.log(window.Kakao.Auth.getAccessToken());
+    });
+    logOut();
+    setKakaoUser(null);
+  }
+  
+  const [googleUser, setGoogleUser] = useState();
   const googleLogIn = () => {
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
@@ -41,26 +72,27 @@ function App() {
     signInWithPopup(auth, provider)
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
+      // const credential = GoogleAuthProvider.credentialFromResult(result);
+      // const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      setUser(user.email)
+      setGoogleUser(user.email)
+      console.log(user.email)
+      console.log(user.displayName)
       // ...
     })
     .then(logIn)
     .catch((error) => {
       // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
+      // const errorCode = error.code;
+      // const errorMessage = error.message;
       // The email of the user's account used.
-      const email = error.email;
+      // const email = error.email;
       // The AuthCredential type that was used.
-      const credential = GoogleAuthProvider.credentialFromError(error);
+      // const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
     });
   }
-
   const googleLogOut = () => {
     const auth = getAuth();
     
@@ -72,6 +104,7 @@ function App() {
     .catch((error) => {
       // An error happened.
     });
+    setGoogleUser(null);
   }
   
   const [show, setShow] = useState(false);
@@ -93,7 +126,14 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <NavBar isLogin={isLogin} modalShow={modalShow} modalLogin={modalLogin} user={user} modalLogOut={modalLogOut} googleLogIn={googleLogIn} toggle={toggle} />
+      <NavBar 
+        isLogin={isLogin}
+        toggle={toggle}
+        modalShow={modalShow}
+        modalLogin={modalLogin}
+        modalLogOut={modalLogOut}
+        kakaoUser={kakaoUser}
+        googleUser={googleUser} />
       {
         !isLogin 
         ? <Routes><Route path="/" element={<HomePage modalLogin={modalLogin} />} /></Routes>
@@ -111,8 +151,17 @@ function App() {
           </div>
       }
       <Modal show={show} modalClose={modalClose} />
-      <ModalLogin showLogin={showLogin} modalLoginClose={modalLoginClose} logIn={logIn} googleLogIn={googleLogIn} />
-      <ModalLogOut showLogOut={showLogOut} modalLogOutClose={modalLogOutClose} googleLogOut={googleLogOut} />
+      <ModalLogin 
+        showLogin={showLogin}
+        modalLoginClose={modalLoginClose}
+        kakaoLogIn={kakaoLogIn}
+        googleLogIn={googleLogIn}
+        logIn={logIn} />
+      <ModalLogOut 
+        showLogOut={showLogOut} 
+        modalLogOutClose={modalLogOutClose} 
+        kakaoLogOut={kakaoLogOut}
+        googleLogOut={googleLogOut} />
     </div>
   );
 }
