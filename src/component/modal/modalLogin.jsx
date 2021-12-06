@@ -13,7 +13,7 @@ const ModalLogin = ({showLogin, modalLoginClose, kakaoLogIn, googleLogIn, logIn}
         <div className={styles.sns_container}>
           <div className={styles.sns}>SNS 로그인</div>
           <div className={styles.brand}>
-            <span className={styles.naver}>네이버 로그인</span>
+            {/* <span className={styles.naver}>네이버 로그인</span> */}
             <span className={styles.kakao} onClick={kakaoLogIn}>카카오 로그인</span>
             <span className={styles.google} onClick={googleLogIn}>구글 로그인</span>
           </div>
@@ -23,7 +23,7 @@ const ModalLogin = ({showLogin, modalLoginClose, kakaoLogIn, googleLogIn, logIn}
         <Button className={styles.button1} onClick={modalLoginClose}>
           취소하기
         </Button>
-        <Button className={styles.button2} onClick={logIn}>로그인</Button>
+        {/* <Button className={styles.button2} onClick={logIn}>로그인</Button> */}
       </Modal.Footer>
     </Modal>
   )
